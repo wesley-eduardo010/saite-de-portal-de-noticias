@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pé na Bola - Contato</title>
+    <title>Fale Conosco - Pé na Bola</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+
+    <header id="header">
         <div class="container header-content">
             <div class="logo">Pé na Bola</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="noticia2.html">Última Notícia</a></li>
                     <li><a href="contato.html" class="active">Contato</a></li>
                 </ul>
             </nav>
@@ -20,18 +22,108 @@
     </header>
 
     <main class="container">
-        <section class="contact-box">
-            <h2>Fale Conosco</h2>
-            <form>
-                <label>Nome</label>
-                <input type="text" placeholder="Seu nome">
-                <label>Email</label>
-                <input type="email" placeholder="Seu email">
-                <label>Mensagem</label>
-                <textarea rows="5" placeholder="Digite sua mensagem..."></textarea>
-                <button type="submit">Enviar</button>
+        <section style="background: white; padding: 30px; border-radius: 8px; margin: 30px auto; max-width: 800px;">
+            <h2>Entre em Contato</h2>
+            <p>Preencha o formulário abaixo para enviar sua mensagem.</p>
+
+            <!-- Formulário Completo -->
+            <form action="#" method="post" enctype="multipart/form-data">
+                
+                <!-- Input Texto -->
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required minlength="3">
+                </div>
+
+                <!-- Input Email com validação -->
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+                </div>
+
+                <!-- Input Tel com Regex (Formato (XX) XXXXX-XXXX) -->
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" 
+                           pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" 
+                           placeholder="(11) 99999-9999" required>
+                    <small>Formato: (99) 99999-9999</small>
+                </div>
+
+                <!-- Select -->
+                <div class="form-group">
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto">
+                        <option value="sugestao">Sugestão de Pauta</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="anuncio">Publicidade</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+
+                <!-- Radio Buttons -->
+                <div class="form-group">
+                    <label>Preferência de Contato:</label>
+                    <input type="radio" id="contato-email" name="pref-contato" value="email" checked>
+                    <label for="contato-email" style="display:inline; font-weight:normal;">Email</label>
+                    
+                    <input type="radio" id="contato-tel" name="pref-contato" value="telefone">
+                    <label for="contato-tel" style="display:inline; font-weight:normal;">Telefone</label>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+
+                <!-- Input File (Anexo) -->
+                <div class="form-group">
+                    <label for="anexo">Anexar Arquivo (Print ou Foto):</label>
+                    <input type="file" id="anexo" name="anexo" accept="image/png, image/jpeg, application/pdf">
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-group">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos" style="display:inline; font-weight:normal;">Li e aceito os termos de uso e política de privacidade.</label>
+                </div>
+
+                <button type="submit" class="btn">Enviar Mensagem</button>
             </form>
         </section>
+
+        <!-- Tabela de Horário de Atendimento -->
+        <section style="margin-top: 40px;">
+            <h3>Horários de Atendimento</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dia da Semana</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda a Sexta</td>
+                        <td>09:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>09:00 - 13:00</td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td>Fechado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Pé na Bola.</p>
+    </footer>
+
 </body>
 </html>
