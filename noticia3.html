@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palmeiras Líder - Pé na Bola</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%2332CD32'/><path d='M50 10 L50 90 M10 50 L90 50' stroke='white' stroke-width='5'/></svg>">
 </head>
 <body>
 
     <header id="header">
         <div class="container header-content">
-            <div class="logo">Pé na Bola</div>
+            <div class="logo">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Pé na Bola
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="noticia2.html">Última Notícia</a></li>
+                    <li class="dropdown">
+                        <a href="#">Campeonatos ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Brasileirão Série A</a></li>
+                            <li><a href="#">Libertadores</a></li>
+                            <li><a href="#">Copa do Brasil</a></li>
+                            <li><a href="#">Futebol Europeu</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
@@ -23,90 +35,27 @@
 
     <main class="container">
         <article style="background: white; padding: 40px; margin-bottom: 40px; border-radius: 8px;">
-            
             <header>
                 <h1 style="font-size: 2.5rem;">Palmeiras assume a liderança isolada do Brasileirão</h1>
                 <p><em>Análise Tática por Matheus Silva | Atualizado em 24/10/2024</em></p>
             </header>
-
             <figure style="margin: 20px 0;">
-                <img src="data:image/jpeg;base64,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" 
-                     alt="Jogadores do Palmeiras comemorando" 
-                     title="Festa no Allianz Parque"
-                     width="100%" height="auto">
-                
+                <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=800&q=80" alt="Palmeiras" style="width:100%; border-radius:8px;">
+                <figcaption>Foto: Divulgação/SE Palmeiras</figcaption>
             </figure>
-
-            <p>Com uma atuação de gala, o <strong>Verdão</strong> não tomou conhecimento do adversário. O técnico Abel Ferreira surpreendeu na escalação, optando por um esquema 3-5-2 que neutralizou o ataque rival.</p>
             
-            <p>O gol que abriu o placar foi uma pintura. A bola atingiu uma velocidade de 102 km/h no chute de fora da área.</p>
-
-            <h3>Tabela de Classificação (G-4)</h3>
-            <p>Veja como ficou a ponta da tabela após esta rodada:</p>
-
+            <h3>Classificação Atual</h3>
             <table>
-                <thead>
-                    <tr>
-                        <th>Posição</th>
-                        <th>Time</th>
-                        <th>Pontos</th>
-                        <th>Saldo de Gols</th>
-                    </tr>
-                </thead>
+                <thead><tr><th>Pos</th><th>Time</th><th>Pontos</th></tr></thead>
                 <tbody>
-                    <tr style="background-color: #e6ffe6;"> <!-- Destaque para o líder -->
-                        <td>1º</td>
-                        <td><strong>Palmeiras</strong></td>
-                        <td>72</td>
-                        <td>+35</td>
-                    </tr>
-                    <tr>
-                        <td>2º</td>
-                        <td>Flamengo</td>
-                        <td>70</td>
-                        <td>+30</td>
-                    </tr>
-                    <tr>
-                        <td>3º</td>
-                        <td>Botafogo</td>
-                        <td>68</td>
-                        <td>+25</td>
-                    </tr>
-                    <tr>
-                        <td>4º</td>
-                        <td>Atlético-MG</td>
-                        <td>65</td>
-                        <td>+20</td>
-                    </tr>
-                    <!-- Mesclagem de colunas no rodapé da tabela -->
-                    <tr>
-                        <td colspan="4" style="text-align: center; font-size: 0.9rem;"><em>Dados atualizados até a 34ª rodada.</em></td>
-                    </tr>
+                    <tr><td>1º</td><td>Palmeiras</td><td>71</td></tr>
+                    <tr><td>2º</td><td>Flamengo</td><td>69</td></tr>
                 </tbody>
             </table>
-
-            <h3>Glossário Tático</h3>
-            <dl>
-                <dt><strong>Pressão Alta</strong></dt>
-                <dd>Estratégia de marcar a saída de bola do adversário ainda no campo de defesa dele.</dd>
-                <dt><strong>Volante de Contenção</strong></dt>
-                <dd>Meio-campista focado na marcação e proteção da zaga.</dd>
-            </dl>
-
             <hr style="margin: 30px 0;">
-
-            <h3>Materiais Complementares</h3>
-            <ul>
-                <li><a href="https://palmeiras.com.br" target="_blank">Site Oficial do Clube</a></li>
-                <li><a href="#" download>Baixar Pôster do Time em Alta Resolução (JPG)</a></li>
-            </ul>
-
+            <a href="index.html" class="btn">Voltar para Home</a>
         </article>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Pé na Bola.</p>
-    </footer>
-
+    <footer><p>&copy; 2024 Pé na Bola.</p></footer>
 </body>
 </html>

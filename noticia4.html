@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polêmica do VAR - Pé na Bola</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%2332CD32'/><path d='M50 10 L50 90 M10 50 L90 50' stroke='white' stroke-width='5'/></svg>">
 </head>
 <body>
 
     <header id="header">
         <div class="container header-content">
-            <div class="logo">Pé na Bola</div>
+            <div class="logo">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Pé na Bola
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="noticia4.html">Última Notícia</a></li>
+                    <li class="dropdown">
+                        <a href="#">Campeonatos ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Brasileirão Série A</a></li>
+                            <li><a href="#">Libertadores</a></li>
+                            <li><a href="#">Copa do Brasil</a></li>
+                            <li><a href="#">Futebol Europeu</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
@@ -23,86 +35,27 @@
 
     <main class="container">
         <article style="background: white; padding: 40px; margin-bottom: 40px; border-radius: 8px;">
-            
             <header>
                 <h1 style="font-size: 2.5rem;">Gol anulado nos acréscimos gera revolta e nota oficial</h1>
                 <p><em>Por Redação | 25/10/2025</em></p>
             </header>
-
             <figure style="margin: 20px 0;">
-                <img src="data:image/jpeg;base64,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" 
-                     alt="Árbitro consultando o VAR" 
-                     title="Momento da Revisão"
-                     width="100%" height="auto">
-                
+                <img src="https://images.unsplash.com/photo-1589487391730-58f20eb2c308?auto=format&fit=crop&w=800&q=80" alt="VAR" style="width:100%; border-radius:8px;">
+                <figcaption>Foto: Árbitro de Vídeo</figcaption>
             </figure>
-
-            <p>A partida seguia empatada até o minuto 90<sup>+5</sup>, quando o atacante marcou o gol que daria a vitória. Porém, a cabine do VAR detectou um impedimento milimétrico.</p>
             
-            <p>O presidente do clube declarou: <blockquote>"Isso é um absurdo. A linha foi traçada de forma equivocada."</blockquote></p>
-
-            <h3>Comparativo de Infrações</h3>
-            <p>A arbitragem foi rigorosa para um lado e permissiva para o outro? Veja os números:</p>
-
+            <h3>Decisões do Árbitro</h3>
             <table>
-                <thead>
-                    <tr>
-                        <th>Critério</th>
-                        <th>Time da Casa</th>
-                        <th>Time Visitante</th>
-                    </tr>
-                </thead>
+                <thead><tr><th>Minuto</th><th>Decisão</th><th>Resultado</th></tr></thead>
                 <tbody>
-                    <tr>
-                        <td>Faltas Cometidas</td>
-                        <td>25</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>Cartões Amarelos</td>
-                        <td>6</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Cartões Vermelhos</td>
-                        <td>1</td>
-                        <td>0</td>
-                    </tr>
-                    <!-- Mesclagem Vertical (Rowspan) -->
-                    <tr>
-                        <td rowspan="2" style="vertical-align: middle;"><strong>Penalidades</strong></td>
-                        <td>A favor: 0</td>
-                        <td>A favor: 1</td>
-                    </tr>
-                    <tr>
-                        <td>Contra: 1</td>
-                        <td>Contra: 0</td>
-                    </tr>
+                    <tr><td>12'</td><td>Pênalti</td><td>Confirmado</td></tr>
+                    <tr><td>94'</td><td>Gol</td><td>Anulado</td></tr>
                 </tbody>
             </table>
-
-            <h3>Entenda as Regras</h3>
-            <dl>
-                <dt><strong>Protocolo do VAR</strong></dt>
-                <dd>O árbitro de vídeo só deve interferir em caso de "erro claro e óbvio" ou "incidente grave não visto".</dd>
-                <dt><strong>Impedimento Semiautomático</strong></dt>
-                <dd>Tecnologia que usa câmeras para rastrear os membros dos jogadores em tempo real.</dd>
-            </dl>
-
             <hr style="margin: 30px 0;">
-
-            <h3>Arquivos</h3>
-            <ul>
-                <li><a href="https://cbf.com.br" target="_blank">Comunicado da Comissão de Arbitragem</a></li>
-                <li><a href="#" download>Baixar Áudio da Cabine do VAR (MP3)</a></li>
-            </ul>
-
+            <a href="index.html" class="btn">Voltar para Home</a>
         </article>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Pé na Bola.</p>
-    </footer>
-
+    <footer><p>&copy; 2024 Pé na Bola.</p></footer>
 </body>
 </html>
